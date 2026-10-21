@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T00:00:00+09:00",
+  "title": "Design System: Goni OX Archive",
+  "extensions": {
+    "colorMeta": {
+      "ink-navy": { "role": "primary", "displayName": "Deep Ink Navy", "canonical": "#102731", "tonalRamp": ["#102731", "#1b3d49", "#285460", "#3f6c75", "#6a8990", "#98b0b2", "#c4d1d0", "#e9f0ee"] },
+      "cool-paper": { "role": "neutral", "displayName": "Cool Paper", "canonical": "#f0f3f1", "tonalRamp": ["#2d3b3a", "#455654", "#63706e", "#85918e", "#a9b4b1", "#c7d0cd", "#e0e7e4", "#f0f3f1"] },
+      "register-teal": { "role": "primary", "displayName": "Register Teal", "canonical": "#086b64", "tonalRamp": ["#063b37", "#075149", "#086b64", "#398a83", "#69a8a1", "#98c2bb", "#c0dcd6", "#e5f2ee"] },
+      "correction-coral": { "role": "secondary", "displayName": "Correction Coral", "canonical": "#a94034", "tonalRamp": ["#5d201b", "#7c2e27", "#a94034", "#bd6258", "#d28a82", "#e1aaa4", "#efd0cb", "#f8e8e5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Readable Korean Display", "purpose": "Queue headings and the OX statement." },
+      "label": { "displayName": "Register Mono", "purpose": "File names, locations, counts, and operational labels." }
+    },
+    "shadows": [
+      { "name": "desk-lift", "value": "0 18px 50px rgba(0, 0, 0, 0.12)", "purpose": "Separates the question work surface from the paper field." },
+      { "name": "drawer-lift", "value": "-18px 0 50px rgba(16, 39, 49, 0.16)", "purpose": "Separates the source index from the desk." }
+    ],
+    "motion": [
+      { "name": "register-open", "value": "cubic-bezier(.19,1,.22,1) 380ms", "purpose": "Reveals the source register after an answer." },
+      { "name": "state-hover", "value": "ease 180ms", "purpose": "Gives answer controls a restrained lift." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "rail-collapse", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary queue actions use dark ink and a compact rectangular silhouette.",
+      "html": "<button class=\"ds-btn-primary\">무작위 순서</button>",
+      "css": ".ds-btn-primary { background: #102731; color: #fcfdfa; padding: 0 14px; min-height: 39px; border: 1px solid #102731; border-radius: 8px; font: 500 12px/1.4 system-ui, sans-serif; } .ds-btn-primary:hover { background: #1b3d49; } .ds-btn-primary:focus-visible { outline: 3px solid #f0a45b; outline-offset: 3px; }"
+    },
+    {
+      "name": "Answer Button",
+      "kind": "button",
+      "refersTo": "button-answer",
+      "description": "O/X choices show the code, action label, and evidence relationship.",
+      "html": "<button class=\"ds-btn-answer\"><strong>O</strong><span>맞다</span></button>",
+      "css": ".ds-btn-answer { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: center; min-height: 78px; padding: 14px 17px; border: 1px solid #102731; border-radius: 8px; color: #102731; background: transparent; } .ds-btn-answer:hover { color: #fcfdfa; background: #102731; transform: translateY(-2px); } .ds-btn-answer:focus-visible { outline: 3px solid #f0a45b; outline-offset: 3px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Search fields stay plain and high-contrast so the query is easy to scan.",
+      "html": "<label class=\"ds-search\"><span>자료·문항 찾기</span><input placeholder=\"예: 에이전트\" /></label>",
+      "css": ".ds-search { display: grid; gap: 7px; color: #334c52; font: 500 11px/1.4 monospace; } .ds-search input { height: 40px; padding: 0 12px; border: 1px solid #aab8b8; border-radius: 8px; color: #102731; background: #fcfdfa; } .ds-search input:focus { border-color: #086b64; outline: 3px solid #f0a45b; outline-offset: 3px; }"
+    },
+    {
+      "name": "Source Register",
+      "kind": "custom",
+      "refersTo": "evidence-strip",
+      "description": "The evidence strip aligns source location and original excerpt after feedback.",
+      "html": "<div class=\"ds-register\"><span>SOURCE REGISTER</span><blockquote>원문 발췌</blockquote></div>",
+      "css": ".ds-register { padding: 15px 17px; border-top: 1px solid #aab8b8; background: #f0f3f1; color: #52666a; font: 500 11px/1.4 monospace; } .ds-register blockquote { margin: 12px 0 0; padding-left: 12px; border-left: 1px solid #086b64; color: #334c52; font: 400 12px/1.65 system-ui, sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Printed Proof Desk",
+    "overview": "The interface borrows the discipline of a print proof and an index card: cool paper, deep ink, narrow registration labels, and a single line that reveals where a claim came from. It is a working study desk first. Navigation, filters, buttons, and drawers remain recognisable web controls; the print language contributes only type, palette, density, and the registration-strip signature.\n\nThe page is intentionally calm and evidence-led. A learner should notice the sentence, choose O or X, then see the source location before chasing a score. The visual system uses tonal layering and thin rules rather than decorative texture or glow.",
+    "keyCharacteristics": ["Cool paper surfaces with navy ink and restrained teal/coral state colors.", "Monospace labels for source, location, counts, and other measurement-like metadata.", "One-pixel registration marks that make evidence feel aligned, not ornamental.", "Standard web interaction patterns with generous focus states and mobile reflow."],
+    "rules": [{ "name": "The Register Rule", "body": "Every answer state has a visible source register; correctness is never presented as an unexplained color flash.", "section": "colors" }],
+    "dos": ["Do keep the statement readable before showing supporting metadata.", "Do use teal and coral only for meaningful state or evidence signals.", "Do keep source file names and locations visible at the moment of feedback.", "Do preserve keyboard O/X/N shortcuts and visible focus."],
+    "donts": ["Don't turn the print reference into a fake paper notebook, ledger, or terminal costume.", "Don't use color alone to communicate correct or wrong.", "Don't add gradients, glow shadows, decorative grid overlays, or tiny functional labels.", "Don't hide the public-source boundary when publishing the static site."]
+  }
+}
