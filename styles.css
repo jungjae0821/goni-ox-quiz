@@ -137,6 +137,7 @@ kbd { display: inline-grid; min-width: 18px; height: 18px; place-items: center; 
 .question-topline { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .question-index-group { display: flex; align-items: center; gap: 12px; }
 .question-index { color: var(--ink); font-family: var(--mono); font-size: 13px; letter-spacing: .06em; }
+.concept-tag { padding: 4px 7px; color: var(--ink); background: var(--cool-paper-deep); border: 1px solid var(--paper-line-strong); border-radius: 6px; font-size: 11px; }
 .topic-tag { padding: 4px 7px; color: var(--teal); background: var(--teal-soft); border-radius: 4px; font-family: var(--mono); font-size: 11px; }
 .bookmark-button { display: inline-flex; align-items: center; gap: 7px; padding: 5px 0; border: 0; color: var(--ink-faint); background: transparent; font-size: 11px; }
 .bookmark-button:hover, .bookmark-button[aria-pressed="true"] { color: var(--teal); }
@@ -245,6 +246,7 @@ kbd { display: inline-grid; min-width: 18px; height: 18px; place-items: center; 
   .queue-controls { margin-top: 17px; }
   .queue-controls button { flex: 1; }
   .queue-meta { flex-wrap: wrap; line-height: 1.5; }
+  .question-index-group { flex-wrap: wrap; gap: 7px 9px; }
   .meta-spacer { display: none; }
   .question-panel { min-height: 0; padding: 25px 19px 24px; border-radius: 11px; }
   .question-panel::before { top: 14px; left: 14px; }

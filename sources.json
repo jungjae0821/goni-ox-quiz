@@ -344,7 +344,7 @@
           "itemIndex": 29
         }
       ],
-      "questionCount": 60,
+      "questionCount": 42,
       "coverageCandidates": 30,
       "coveragePercent": 100.0
     },
@@ -477,7 +477,7 @@
           "itemIndex": 10
         }
       ],
-      "questionCount": 22,
+      "questionCount": 16,
       "coverageCandidates": 11,
       "coveragePercent": 100.0
     },
@@ -1094,7 +1094,7 @@
           "itemIndex": 54
         }
       ],
-      "questionCount": 84,
+      "questionCount": 18,
       "coverageCandidates": 48,
       "coveragePercent": 87.3
     },
@@ -9840,7 +9840,7 @@
           "itemIndex": 793
         }
       ],
-      "questionCount": 213,
+      "questionCount": 68,
       "coverageCandidates": 120,
       "coveragePercent": 15.1
     },
@@ -13647,7 +13647,7 @@
           "itemIndex": 344
         }
       ],
-      "questionCount": 129,
+      "questionCount": 30,
       "coverageCandidates": 74,
       "coveragePercent": 21.4
     },
@@ -16211,7 +16211,7 @@
           "itemIndex": 231
         }
       ],
-      "questionCount": 101,
+      "questionCount": 28,
       "coverageCandidates": 63,
       "coveragePercent": 27.2
     },
@@ -17070,7 +17070,7 @@
           "itemIndex": 76
         }
       ],
-      "questionCount": 118,
+      "questionCount": 32,
       "coverageCandidates": 65,
       "coveragePercent": 84.4
     },
@@ -17467,7 +17467,7 @@
           "itemIndex": 34
         }
       ],
-      "questionCount": 43,
+      "questionCount": 20,
       "coverageCandidates": 25,
       "coveragePercent": 71.4
     },
@@ -21439,9 +21439,11 @@
           "itemIndex": 359
         }
       ],
-      "questionCount": 90,
+      "questionCount": 34,
       "coverageCandidates": 57,
       "coveragePercent": 15.8
     }
-  ]
+  ],
+  "questionCount": 288,
+  "questionMode": "concept-curated"
 }

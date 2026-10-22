@@ -2,83 +2,75 @@
   "generatedFrom": "C:\\Users\\wizju\\Downloads\\고니",
   "sourceCount": 9,
   "rawItemCount": 1939,
-  "uniqueContentUnits": 493,
-  "questionCount": 860,
-  "trueCount": 493,
-  "falseCount": 367,
+  "curatedConceptCount": 144,
+  "questionCount": 288,
+  "trueCount": 144,
+  "falseCount": 144,
   "sourceStats": [
     {
       "name": "AI_컴퓨터개론_인공지능역사.pdf",
       "format": "pdf",
       "rawItemCount": 30,
-      "coveredContentUnits": 30,
-      "coveragePercent": 100.0,
-      "questionCount": 60
+      "curatedConceptCount": 21,
+      "questionCount": 42
     },
     {
       "name": "AI와 AGI의 쉬운 이해2.pdf",
       "format": "pdf",
       "rawItemCount": 11,
-      "coveredContentUnits": 11,
-      "coveragePercent": 100.0,
-      "questionCount": 22
+      "curatedConceptCount": 8,
+      "questionCount": 16
     },
     {
       "name": "PhysicalAI_요약.docx",
       "format": "docx",
       "rawItemCount": 55,
-      "coveredContentUnits": 48,
-      "coveragePercent": 87.3,
-      "questionCount": 84
+      "curatedConceptCount": 9,
+      "questionCount": 18
     },
     {
       "name": "가트너_2023-2025.pptx",
       "format": "pptx",
       "rawItemCount": 794,
-      "coveredContentUnits": 120,
-      "coveragePercent": 15.1,
-      "questionCount": 213
+      "curatedConceptCount": 34,
+      "questionCount": 68
     },
     {
       "name": "인공지능0916.docx",
       "format": "docx",
       "rawItemCount": 345,
-      "coveredContentUnits": 74,
-      "coveragePercent": 21.4,
-      "questionCount": 129
+      "curatedConceptCount": 15,
+      "questionCount": 30
     },
     {
       "name": "인터넷의_역사_발표자료_20260908.pptx",
       "format": "pptx",
       "rawItemCount": 232,
-      "coveredContentUnits": 63,
-      "coveragePercent": 27.2,
-      "questionCount": 101
+      "curatedConceptCount": 14,
+      "questionCount": 28
     },
     {
       "name": "지능에이젼트.docx",
       "format": "docx",
       "rawItemCount": 77,
-      "coveredContentUnits": 65,
-      "coveragePercent": 84.4,
-      "questionCount": 118
+      "curatedConceptCount": 16,
+      "questionCount": 32
     },
     {
       "name": "컴퓨터 비젼수정.docx",
       "format": "docx",
       "rawItemCount": 35,
-      "coveredContentUnits": 25,
-      "coveragePercent": 71.4,
-      "questionCount": 43
+      "curatedConceptCount": 10,
+      "questionCount": 20
     },
     {
       "name": "컴퓨터개론_인공지능.docx",
       "format": "docx",
       "rawItemCount": 360,
-      "coveredContentUnits": 57,
-      "coveragePercent": 15.8,
-      "questionCount": 90
+      "curatedConceptCount": 17,
+      "questionCount": 34
     }
   ],
-  "method": "내용이 있는 원문 단위를 중복 제거해 원문 일치 문항을 만들고, 안전하게 바꿀 수 있는 핵심 용어·연도·수치·순서를 변형한 오답 문항을 추가했다. 제목·시간표·슬라이드 번호 같은 표식은 원문 색인에는 남기고 문항에서는 제외했다."
+  "method": "자료에서 개념을 선별해 한 문항에 하나의 개념만 담고, 개념별 O/X 문장·해설·원문 위치를 수동 큐레이션했다. 제목·진행 시간·발표자 노트·표 형식은 문항에서 제외했다.",
+  "missingEvidenceWarnings": []
 }

@@ -1,4 +1,4 @@
-const STORAGE_KEY = "goni-ox-quiz-state-v1";
+const STORAGE_KEY = "goni-ox-quiz-state-v2";
 const $ = (id) => document.getElementById(id);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
@@ -64,7 +64,7 @@ function matchesFilter(question) {
   const record = getRecord(question.id);
   const sourceMatch = !state.sourceId || question.sourceId === state.sourceId;
   const search = normalizeSearch(state.search);
-  const textMatch = !search || [question.statement, question.evidence, question.source, question.location, question.topic]
+  const textMatch = !search || [question.statement, question.concept, question.evidence, question.source, question.location, question.topic]
     .join(" ").toLocaleLowerCase("ko-KR").includes(search);
   if (!sourceMatch || !textMatch) return false;
   if (state.mode === "unlearned") return !record;
@@ -95,7 +95,7 @@ function updateQueueTitle() {
   const modeName = { all: "전체 문항", unlearned: "미학습", wrong: "오답 다시 보기", bookmarked: "북마크" }[state.mode];
   const title = state.sourceId ? `${modeName} · ${sourceName}` : modeName;
   const descriptions = {
-    all: "원문 근거와 함께 전체 범위를 한 바퀴 돌아봅니다.",
+    all: "개념 하나씩 확인하고, 답을 고른 뒤 원문 근거로 복습합니다.",
     unlearned: "아직 답하지 않은 문항만 모아 첫 회독을 마칩니다.",
     wrong: "한 번 틀린 문항을 근거와 함께 다시 확인합니다.",
     bookmarked: "나중에 다시 보고 싶은 문항을 모아둔 서랍입니다.",
@@ -125,7 +125,7 @@ function renderCounts() {
   const sourceFilter = (question) => !state.sourceId || question.sourceId === state.sourceId;
   const searchable = questions.filter((question) => {
     if (!sourceFilter(question)) return false;
-    return !search || [question.statement, question.evidence, question.source, question.location, question.topic]
+    return !search || [question.statement, question.concept, question.evidence, question.source, question.location, question.topic]
       .join(" ").toLocaleLowerCase("ko-KR").includes(search);
   });
   const answered = Object.keys(state.answers).length;
@@ -180,6 +180,7 @@ function renderQuestion() {
   panel.querySelectorAll(":scope > :not(#emptyState)").forEach((element) => { element.hidden = false; });
   const record = getRecord(question.id);
   setText("questionNumber", `Q ${String(question.number).padStart(3, "0")}`);
+  setText("questionConcept", question.concept || "개념 확인");
   setText("questionTopic", question.topic);
   setText("questionSource", question.source);
   setText("questionLocation", question.location);
